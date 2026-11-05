@@ -11,7 +11,7 @@ public class Main {
         products.add(product1);
         products.add(product2);
         ProductRepositoryImple productRepositoryImple = new ProductRepositoryImple(products);
-        int findById = productRepositoryImple.total();
-        System.out.println(findById);
+        int range = productRepositoryImple.amountByPriceRange(100, 400);
+        System.out.println(range);
     }
 }

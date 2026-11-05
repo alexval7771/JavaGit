@@ -41,4 +41,31 @@ public class ProductRepositoryImple implements ProductRepository{
         }
         return total;
     }
+
+    @Override
+    public int sumMinMax() {
+        int min = products.get(0).getPrice();
+        int max = 0;
+        for (Product product : products) {
+            if (product.getPrice() < min) {
+                min = product.getPrice();
+            }
+            if (product.getPrice() > max) {
+                max = product.getPrice();
+            }
+        }
+        int total = max + min;
+        return total;
+    }
+
+    @Override
+    public int amountByPriceRange(int from, int to) {
+        int total = 0;
+        for (Product product : products) {
+            if (product.getPrice() > from && product.getPrice() < to) {
+                total++;
+            }
+        }
+        return total;
+    }
 }
