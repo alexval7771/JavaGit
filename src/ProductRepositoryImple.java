@@ -68,4 +68,15 @@ public class ProductRepositoryImple implements ProductRepository{
         }
         return total;
     }
+
+    @Override
+    public int amountPrice() {
+        int total = 0;
+        for (Product product : products) {
+            if (product.getPrice() < 0) {
+                total++;
+            }
+        }
+        return total;
+    }
 }
