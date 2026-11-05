@@ -5,4 +5,8 @@ public interface ProductRepository {
 
     int total();
 
+    int sumMinMax();
+
+    int amountByPriceRange(int from , int to);
+
 }
