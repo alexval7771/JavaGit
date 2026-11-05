@@ -9,5 +9,5 @@ public interface ProductRepository {
 
     int amountByPriceRange(int from , int to);
 
-    int amountPrice();
+    int amountNegativePrice();
 }

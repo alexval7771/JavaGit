@@ -70,7 +70,7 @@ public class ProductRepositoryImple implements ProductRepository{
     }
 
     @Override
-    public int amountPrice() {
+    public int amountNegativePrice() {
         int total = 0;
         for (Product product : products) {
             if (product.getPrice() < 0) {
