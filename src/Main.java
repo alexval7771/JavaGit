@@ -12,7 +12,10 @@ public class Main {
         products.add(product2);
         ProductRepositoryImple productRepositoryImple = new ProductRepositoryImple(products);
         /*int range = productRepositoryImple.amountByPriceRange(100, 400);*/
-        int amountNegativePrice = productRepositoryImple.amountNegativePrice();
-        System.out.println(amountNegativePrice);
+        /*int amountNegativePrice = productRepositoryImple.amountNegativePrice();
+        System.out.println(amountNegativePrice);*/
+
+        List<Product> products1 = productRepositoryImple.ifNegativePrice();
+        System.out.println(products1);
     }
 }
