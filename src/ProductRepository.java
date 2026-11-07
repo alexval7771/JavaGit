@@ -1,3 +1,5 @@
+import java.util.List;
+
 public interface ProductRepository {
     Product findByID(int id);
 
@@ -10,4 +12,7 @@ public interface ProductRepository {
     int amountByPriceRange(int from , int to);
 
     int amountNegativePrice();
+
+    List<Product> ifNegativePrice();
+
 }

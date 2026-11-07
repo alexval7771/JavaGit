@@ -79,4 +79,17 @@ public class ProductRepositoryImple implements ProductRepository{
         }
         return total;
     }
+
+    @Override
+    public List<Product> ifNegativePrice() {
+        List<Product> result = new ArrayList<>();
+        for (Product product : products) {
+            if (product.getPrice() < 0) {
+                product.setPrice(product.getPrice() * -1);
+                result.add(product);
+            }
+        }
+        return result;
+    }
+
 }
