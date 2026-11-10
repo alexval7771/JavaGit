@@ -17,4 +17,6 @@ public interface ProductRepository {
 
     Product findByName(String name);
 
+    Product minProduct();
+
 }

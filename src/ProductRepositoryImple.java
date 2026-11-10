@@ -103,4 +103,17 @@ public class ProductRepositoryImple implements ProductRepository{
         return product1;
     }
 
+    @Override
+    public Product minProduct() {
+        Product productMin = products.get(0);
+        int min = products.get(0).getPrice();
+        for (Product product : products) {
+            if (product.getPrice() < min) {
+                min = product.getPrice();
+                productMin = product;
+            }
+        }
+        return productMin;
+    }
+
 }
