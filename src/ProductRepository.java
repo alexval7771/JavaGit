@@ -19,4 +19,6 @@ public interface ProductRepository {
 
     Product minProduct();
 
+    int amountEndWithA();
+
 }

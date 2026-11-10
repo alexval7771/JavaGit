@@ -116,4 +116,15 @@ public class ProductRepositoryImple implements ProductRepository{
         return productMin;
     }
 
+    @Override
+    public int amountEndWithA() {
+        int total = 0;
+        for (Product product : products) {
+            if (product.getName().endsWith("a")) {
+                total++;
+            }
+        }
+        return total;
+    }
+
 }
