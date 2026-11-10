@@ -92,4 +92,39 @@ public class ProductRepositoryImple implements ProductRepository{
         return result;
     }
 
+    @Override
+    public Product findByName(String name) {
+        Product product1 = null;
+        for (Product product : products) {
+            if (product.getName() == name) {
+                product1 = product;
+            }
+        }
+        return product1;
+    }
+
+    @Override
+    public Product minProduct() {
+        Product productMin = products.get(0);
+        int min = products.get(0).getPrice();
+        for (Product product : products) {
+            if (product.getPrice() < min) {
+                min = product.getPrice();
+                productMin = product;
+            }
+        }
+        return productMin;
+    }
+
+    @Override
+    public int amountEndWithA() {
+        int total = 0;
+        for (Product product : products) {
+            if (product.getName().endsWith("a")) {
+                total++;
+            }
+        }
+        return total;
+    }
+
 }
