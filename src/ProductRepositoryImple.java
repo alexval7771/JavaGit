@@ -92,4 +92,15 @@ public class ProductRepositoryImple implements ProductRepository{
         return result;
     }
 
+    @Override
+    public Product findByName(String name) {
+        Product product1 = null;
+        for (Product product : products) {
+            if (product.getName() == name) {
+                product1 = product;
+            }
+        }
+        return product1;
+    }
+
 }

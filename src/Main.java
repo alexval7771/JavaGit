@@ -15,7 +15,9 @@ public class Main {
         /*int amountNegativePrice = productRepositoryImple.amountNegativePrice();
         System.out.println(amountNegativePrice);*/
 
-        List<Product> products1 = productRepositoryImple.ifNegativePrice();
-        System.out.println(products1);
+       /* List<Product> products1 = productRepositoryImple.ifNegativePrice();
+        System.out.println(products1);*/
+        Product product3 = productRepositoryImple.findByName("Cucumber");
+        System.out.println(product3);
     }
 }

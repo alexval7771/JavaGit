@@ -15,4 +15,6 @@ public interface ProductRepository {
 
     List<Product> ifNegativePrice();
 
+    Product findByName(String name);
+
 }
