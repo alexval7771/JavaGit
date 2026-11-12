@@ -127,6 +127,10 @@ public class ProductRepositoryImple implements ProductRepository{
         return total;
     }
 
+    /**
+     * Данный метод переворачивает цену у всех продуктов , и возвращает лист измененных
+     * @return Лист измененных продуктов
+     */
     @Override
     public List<Product> reversePrice() {
         List<Product> products1 = new ArrayList<>();
