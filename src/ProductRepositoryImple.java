@@ -134,6 +134,9 @@ public class ProductRepositoryImple implements ProductRepository{
     @Override
     public List<Product> reversePrice() {
         List<Product> products1 = new ArrayList<>();
+        if (products.isEmpty()) {
+            throw new ProductNotFound("List products is empty");
+        }
         for (Product product : products) {
             String price = product.getPrice() + "";
             String empty = "";
