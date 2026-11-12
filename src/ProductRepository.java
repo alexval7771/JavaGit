@@ -21,4 +21,6 @@ public interface ProductRepository {
 
     int amountEndWithA();
 
+    List<Product> reversePrice();
+
 }

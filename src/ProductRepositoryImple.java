@@ -127,4 +127,19 @@ public class ProductRepositoryImple implements ProductRepository{
         return total;
     }
 
+    @Override
+    public List<Product> reversePrice() {
+        List<Product> products1 = new ArrayList<>();
+        for (Product product : products) {
+            String price = product.getPrice() + "";
+            String empty = "";
+            for (int i = price.length()-1; i >=0 ; i--) {
+                empty = empty + price.charAt(i);
+            }
+            product.setPrice(Integer.parseInt(empty));
+            products1.add(product);
+        }
+        return products1;
+    }
+
 }
