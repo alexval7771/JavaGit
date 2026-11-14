@@ -8,6 +8,11 @@ public class ProductRepositoryImple implements ProductRepository{
         this.products = products;
     }
 
+    /**
+     * Данный метод ведет поиск по id продукта
+     * @param id id для поиска продукта
+     * @return Возвращает найденный продукт
+     */
     @Override
     public Product findByID(int id) {
         Product product1 = null;
@@ -20,6 +25,10 @@ public class ProductRepositoryImple implements ProductRepository{
         return product1;
     }
 
+    /**
+     * Этот метод находит самого дорогого продукта
+     * @return Возвращает продукт , у которого самая высокая цена
+     */
     @Override
     public Product findMax() {
         int priceMax = 0;
@@ -33,6 +42,10 @@ public class ProductRepositoryImple implements ProductRepository{
         return productMax;
     }
 
+    /**
+     * Данный метод сумирует все цены продуктов
+     * @return Возвращает сумму цен продуктов
+     */
     @Override
     public int total() {
         int total = 0;
@@ -42,6 +55,10 @@ public class ProductRepositoryImple implements ProductRepository{
         return total;
     }
 
+    /**
+     * Данный метод сумирует цены самого дорогого продукта и самого дешевого
+     * @return озвращает суммы цен , самого дорогого и самого дешевого
+     */
     @Override
     public int sumMinMax() {
         int min = products.get(0).getPrice();
@@ -58,6 +75,12 @@ public class ProductRepositoryImple implements ProductRepository{
         return total;
     }
 
+    /**
+     * Данный метод ищет продукты , которые находятся в диапазоне цен
+     * @param from от
+     * @param to до
+     * @return Возвращает количество продуктов , которыые подходят под условие
+     */
     @Override
     public int amountByPriceRange(int from, int to) {
         int total = 0;
@@ -69,6 +92,10 @@ public class ProductRepositoryImple implements ProductRepository{
         return total;
     }
 
+    /**
+     * Данный метод ищет продуктов с отрицательной ценой
+     * @return Возвращает количество продуктов с отрицательной ценой
+     */
     @Override
     public int amountNegativePrice() {
         int total = 0;
@@ -80,6 +107,10 @@ public class ProductRepositoryImple implements ProductRepository{
         return total;
     }
 
+    /**
+     * Данный метод преобразует отрицательную цену продукта , в положительную
+     * @return Возвращает лист продуктов с преобразованной ценой
+     */
     @Override
     public List<Product> ifNegativePrice() {
         List<Product> result = new ArrayList<>();
@@ -92,6 +123,11 @@ public class ProductRepositoryImple implements ProductRepository{
         return result;
     }
 
+    /**
+     * Данный метод ведет поиск по имени , которое приходит в аргументе
+     * @param name to find product
+     * @return Возвращает найденный продукт
+     */
     @Override
     public Product findByName(String name) {
         Product product1 = null;
@@ -102,6 +138,11 @@ public class ProductRepositoryImple implements ProductRepository{
         }
         return product1;
     }
+
+    /**
+     * Данный метод ищет минимальный продукт по цене
+     * @return Возвращает минимальный продукт
+     */
 
     @Override
     public Product minProduct() {
@@ -116,6 +157,10 @@ public class ProductRepositoryImple implements ProductRepository{
         return productMin;
     }
 
+    /**
+     * Данный метод проверяет кончается ли слово на букву 'a'
+     * @return Количетсво продуктов у которых окончание 'а'
+     */
     @Override
     public int amountEndWithA() {
         int total = 0;
