@@ -194,4 +194,19 @@ public class ProductRepositoryImple implements ProductRepository{
         return products1;
     }
 
+    @Override
+    public List<Product> handleProduct() {
+        for (Product product : products) {
+            String price = product.getPrice() + "";
+            String empty = "";
+            for (int i = 0; i < price.length(); i++) {
+                if (price.charAt(i) != '1' && price.charAt(i) != '0') {
+                    empty = empty + price.charAt(i);
+                }
+            }
+            product.setPrice(Integer.parseInt(empty));
+        }
+        return products;
+    }
+
 }

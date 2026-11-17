@@ -23,4 +23,6 @@ public interface ProductRepository {
 
     List<Product> reversePrice();
 
+    List<Product> handleProduct();
+
 }
