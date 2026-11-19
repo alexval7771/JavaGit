@@ -25,7 +25,9 @@ public class Main {
        /* int total = productRepositoryImple.amountEndWithA();
         System.out.println(total);*/
 
-        List<Product> products1 = productRepositoryImple.reversePrice();
-        System.out.println(products1);
+        /*List<Product> products1 = productRepositoryImple.reversePrice();
+        System.out.println(products1);*/
+
+        productRepositoryImple.statisticsProducts();
     }
 }

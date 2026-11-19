@@ -209,4 +209,25 @@ public class ProductRepositoryImple implements ProductRepository{
         return products;
     }
 
+    @Override
+    public void statisticsProducts() {
+        Product productMax = null;
+        int max = 0;
+        Product productMin = products.get(0);
+        int min = products.get(0).getPrice();
+        int average = 0;
+        for (Product product : products) {
+            if (product.getPrice() > max) {
+                max = product.getPrice();
+                productMax = product;
+            }
+            if (product.getPrice() < min) {
+                min = product.getPrice();
+                productMin = product;
+            }
+            average = average + product.getPrice();
+        }
+        System.out.println(productMax + " - " + productMin + " - " + average);
+    }
+
 }
