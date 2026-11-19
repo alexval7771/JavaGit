@@ -25,4 +25,7 @@ public interface ProductRepository {
 
     List<Product> handleProduct();
 
+    void statisticsProducts();
+
+
 }
