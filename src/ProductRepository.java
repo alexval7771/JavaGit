@@ -27,5 +27,8 @@ public interface ProductRepository {
 
     void statisticsProducts();
 
+    void statisricsPrice();
+
+
 
 }
