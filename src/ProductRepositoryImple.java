@@ -248,5 +248,40 @@ public class ProductRepositoryImple implements ProductRepository{
         System.out.println("max:" + max + " min:" + min + " average:" + total / products.size() );
     }
 
+    @Override
+    public List<Product> minMaxReversePrice() {
+        int max = 0;
+        int min = products.get(0).getPrice();
+        List<Product> maxMinProduct = new ArrayList<>();
+        Product maxProduct = null;
+        Product minProduct = null;
+        for (Product product : products) {
+            if (product.getPrice() > max) {
+                max = product.getPrice();
+                maxProduct = product;
+            }
+
+            if (product.getPrice() < min) {
+                min = product.getPrice();
+                minProduct = product;
+            }
+        }
+        String maxPrice = maxProduct.getPrice() + "";
+        String minPrice = minProduct.getPrice() + "";
+        String emptyMax = "";
+        String emptyMin = "";
+            for (int i = maxPrice.length()-1; i >=0 ; i--) {
+                emptyMax = emptyMax + maxPrice.charAt(i);
+            }
+        for (int i = minPrice.length()-1; i >=0 ; i--) {
+            emptyMin = emptyMin + minPrice.charAt(i);
+        }
+        maxProduct.setPrice(Integer.parseInt(emptyMax));
+        minProduct.setPrice(Integer.parseInt(emptyMin));
+        maxMinProduct.add(maxProduct);
+        maxMinProduct.add(minProduct);
+        return maxMinProduct;
+     }
+
 
 }

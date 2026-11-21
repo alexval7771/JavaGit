@@ -29,6 +29,9 @@ public interface ProductRepository {
 
     void statisricsPrice();
 
+    List<Product> minMaxReversePrice();
+
+
 
 
 }
