@@ -3,9 +3,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Product product = new Product(1, "Cucumber", 1002, 10);
-        Product product1 = new Product(2, "Tomata", 4005, 20);
-        Product product2 = new Product(3, "Potata", 3004, 30);
+        Product product = new Product(1, "Cucumber", 11002, 10 , true);
+        Product product1 = new Product(2, "Tomata", 4005, 20 , false);
+        Product product2 = new Product(3, "Potata", -3004, 30, true);
         List<Product> products = new ArrayList<>();
         products.add(product);
         products.add(product1);
@@ -30,6 +30,10 @@ public class Main {
 
         /*productRepositoryImple.statisticsProducts();*/
 
-        productRepositoryImple.statisricsPrice();
+       /* productRepositoryImple.statisricsPrice();*/
+
+        List<Product> products1 = productRepositoryImple.ifItsBu();
+        System.out.println(products1);
+        
     }
 }
