@@ -3,12 +3,14 @@ public class Product {
     private String name;
     private int price;
     private int sale;
+    private boolean isBu;
 
-    Product(int id, String name, int price, int sale) {
+    Product(int id, String name, int price, int sale , boolean isBu) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.sale = sale;
+        this.isBu = isBu;
     }
 
     public int getId() {
@@ -38,6 +40,15 @@ public class Product {
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 ", sale=" + sale +
+                ", isBu=" + isBu +
                 '}';
+    }
+
+    public boolean isBu() {
+        return isBu;
+    }
+
+    public void setBu(boolean bu) {
+        isBu = bu;
     }
 }

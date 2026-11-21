@@ -283,5 +283,20 @@ public class ProductRepositoryImple implements ProductRepository{
         return maxMinProduct;
      }
 
+    @Override
+    public List<Product> ifItsBu() {
+        List<Product> products1 = new ArrayList<>();
+        for (Product product : products) {
+            if (product.isBu()) {
+                product.setBu(false);
+            }
+            if (product.getPrice() < 0) {
+                product.setPrice(product.getPrice() * -1);
+            }
+            products1.add(product);
+        }
+        return products1;
+    }
+
 
 }
