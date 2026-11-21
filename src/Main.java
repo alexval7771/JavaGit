@@ -28,6 +28,8 @@ public class Main {
         /*List<Product> products1 = productRepositoryImple.reversePrice();
         System.out.println(products1);*/
 
-        productRepositoryImple.statisticsProducts();
+        /*productRepositoryImple.statisticsProducts();*/
+
+        productRepositoryImple.statisricsPrice();
     }
 }
