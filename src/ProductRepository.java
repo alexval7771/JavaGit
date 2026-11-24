@@ -32,4 +32,6 @@ public interface ProductRepository {
     List<Product> minMaxReversePrice();
 
     List<Product> ifItsBu();
+
+    List<Product> withoutZero();
 }

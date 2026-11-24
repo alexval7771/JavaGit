@@ -298,5 +298,22 @@ public class ProductRepositoryImple implements ProductRepository{
         return products1;
     }
 
+    @Override
+    public List<Product> withoutZero() {
+        List<Product> products1 = new ArrayList<>();
+        for (Product product : products) {
+            String price = product.getPrice() + "";
+            String without0 = "";
+            for (int i = 0; i < price.length(); i++) {
+                if (price.charAt(i) != '0') {
+                    without0 = without0 + price.charAt(i);
+                }
+            }
+            product.setPrice(Integer.parseInt(without0));
+            products1.add(product);
+        }
+        return products1;
+    }
+
 
 }
