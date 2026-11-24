@@ -315,5 +315,28 @@ public class ProductRepositoryImple implements ProductRepository{
         return products1;
     }
 
+    @Override
+    public Product productMaxWithReverseName() {
+        Product productMax = null;
+        int max = 0;
+        for (Product product : products) {
+            if (product.getPrice() > max) {
+                max = product.getPrice();
+                productMax = product;
+            }
+        }
+
+        String fp = productMax.getName().substring(0, productMax.getName().length() / 2);
+        String sp = productMax.getName().substring(productMax.getName().length() / 2);
+        String reverse = "";
+        for (Product product : products) {
+            for (int i = product.getName().length()-1; i >=0 ; i--) {
+                reverse = reverse + product.getName().charAt(i);
+            }
+        }
+        productMax.setName(fp + " - " +  reverse + " - " + sp);
+        return productMax;
+    }
+
 
 }

@@ -34,4 +34,6 @@ public interface ProductRepository {
     List<Product> ifItsBu();
 
     List<Product> withoutZero();
+
+    Product productMaxWithReverseName();
 }

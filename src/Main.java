@@ -35,6 +35,9 @@ public class Main {
         /*List<Product> products1 = productRepositoryImple.ifItsBu();
         System.out.println(products1);*/
 
+        Product product3 = productRepositoryImple.productMaxWithReverseName();
+        System.out.println(product3.toString());
+
 
     }
 }
