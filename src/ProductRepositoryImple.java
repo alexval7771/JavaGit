@@ -338,5 +338,25 @@ public class ProductRepositoryImple implements ProductRepository{
         return productMax;
     }
 
+    @Override
+    public List<Product> productWithA() {
+        List<Product> products1 = new ArrayList<>();
+        for (Product product : products) {
+            String newName = "";
+            for (int i = 0; i < product.getName().length() ; i++) {
+                if (product.getName().charAt(i) == 'a') {
+                    for (int j = 0; j < product.getName().length(); j++) {
+                        newName += 'a';
+                    }
+                }else {
+                    newName += product.getName().charAt(i);
+                }
+            }
+            product.setName(newName);
+            products1.add(product);
+        }
+        return products1;
+    }
+
 
 }
