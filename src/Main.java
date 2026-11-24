@@ -32,8 +32,9 @@ public class Main {
 
        /* productRepositoryImple.statisricsPrice();*/
 
-        List<Product> products1 = productRepositoryImple.ifItsBu();
-        System.out.println(products1);
-        
+        /*List<Product> products1 = productRepositoryImple.ifItsBu();
+        System.out.println(products1);*/
+
+
     }
 }
