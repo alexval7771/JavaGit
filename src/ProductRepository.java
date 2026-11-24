@@ -36,4 +36,6 @@ public interface ProductRepository {
     List<Product> withoutZero();
 
     Product productMaxWithReverseName();
+
+    List<Product> productWithA();
 }
